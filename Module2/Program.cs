@@ -46,6 +46,17 @@ class Program
             Console.WriteLine($"Student Average Grade: {student.CalculateAverageGrade()}");
             Console.WriteLine();
         }
+
+        var mathClass = new Course();
+        mathClass.CourseName = "Math";
+        mathClass.CourseCode = "101";
+        mathClass.EnrollStudent(student1);
+        mathClass.EnrollStudent(student2);
+        Console.WriteLine($"Welcome to {mathClass.CourseName} {mathClass.CourseCode}. Here are the following enrolled students:");
+        foreach (var student in mathClass.EnrolledStudents)
+        {
+            Console.WriteLine(student.Name);
+        }
         
     }
 }
